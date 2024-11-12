@@ -1,0 +1,102 @@
+.playlist-container {
+    display: flex;
+    border-top: 2px solid black;
+  }
+  
+  .playlist-sidebar {
+    min-width: 200px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    /* max-height: 40vh; */
+    overflow-x: none;
+    overflow-y:auto;
+  }
+  
+  .playlist-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .playlist-item.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  .playlist-item.completed .checkmark {
+    color: green;
+    margin-left: 5px;
+  }
+  
+  .playlist-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  
+  .complete-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 60%;
+    align-self: center;
+  }
+  .incomplete-button {
+    background-color: #aaa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 60%;
+    align-self: center;
+  }
+
+  .complete-button:disabled {
+    background-color: #aaa;
+  }
+  
+  .navigation-buttons {
+    margin-top: 20px;
+    align-self: center;
+  }
+  
+  .navigation-buttons button {
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+/* Ocultar sidebar en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .playlist-sidebar {
+    display: none;
+  }
+
+  /* Alinear contenido al ancho completo en móvil */
+  .playlist-container {
+    flex-direction: column;
+  }
+
+  .playlist-content {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .playlist-content img {
+    width: 70% !important; /* Ajusta el tamaño de la imagen en móvil */
+    height: auto;
+  }
+  
+  .complete-button, .incomplete-button {
+    width: 80%; /* Ajusta el tamaño del botón en móvil */
+  }
+}

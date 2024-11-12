@@ -1,0 +1,29 @@
+.day-content {
+    padding: 20px;
+    text-align: center;
+    width: 50vw;
+    align-self: center;
+  }
+  
+  .day-title {
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  
+  .day-subtitle a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .day-progress, .day-hashtag, .day-masterclass, .day-quote {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .day-paragraph {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
