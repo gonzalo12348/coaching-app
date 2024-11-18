@@ -27,6 +27,7 @@ const products = [
 
 function ProductDetail() {
   const { id } = useParams();
+  // eslint-disable-next-line eqeqeq
   const product = products.find((product) => product.id == id);
 
   if (!product) {

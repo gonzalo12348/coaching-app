@@ -4,6 +4,7 @@ import img from "../../images/estoico.jpg";
 import PlaylistItem from './components/PlaylistItem';
 import { firestore, auth } from "../../auth/fireBaseConfig";
 import { doc, setDoc, collection, getDocs, getDoc } from "firebase/firestore";
+import PlaylistItemDay1 from './components/PlaylistItemDay1';
 
 
 const PlaylistCarousel = () => {
@@ -87,7 +88,7 @@ const PlaylistCarousel = () => {
 
   return (
     <div className="playlist-container" style={{ display: "flex", flexDirection: "column", minHeight: "50vh" }}>
-      <div style={{ display: "flex", flexDirection: "row", maxHeight: "60vh" }}>
+      <div className='playlist-head-container' style={{ display: "flex", flexDirection: "row", maxHeight: "60vh", border: "2px solid black", marginBottom: "16px" }}>
         <div className="playlist-sidebar">
           <h3>Mes 1-3</h3>
           <ul>
@@ -128,12 +129,22 @@ const PlaylistCarousel = () => {
         </div>
       </div>
       {/* Contenido del Día */}
-      <PlaylistItem
+      {days[currentDay] && days[currentDay]?.day == 1 ? (
+        <PlaylistItemDay1
         title={days[currentDay].title}
         subtitle={`Mes ${Math.ceil(days[currentDay].day / 30)}`}
         dayNumber={days[currentDay].day}
         content={days[currentDay].body}
-      />
+        />
+      ) : (
+        <PlaylistItem
+          title={days[currentDay].title}
+          subtitle={`Mes ${Math.ceil(days[currentDay].day / 30)}`}
+          dayNumber={days[currentDay].day}
+          content={days[currentDay].body}
+        />
+        
+      )}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 .playlist-container {
     display: flex;
-    border-top: 2px solid black;
   }
   
   .playlist-sidebar {
@@ -73,6 +72,11 @@
     margin-right: 10px;
     padding: 10px;
   }
+
+  
+  .playlist-head-container {
+    border-inline: none !important;
+  }
   
 /* Ocultar sidebar en dispositivos móviles */
 @media screen and (max-width: 768px) {
@@ -98,5 +102,9 @@
   
   .complete-button, .incomplete-button {
     width: 80%; /* Ajusta el tamaño del botón en móvil */
+  }
+
+  .playlist-head-container {
+    padding-bottom: 32px;
   }
 }

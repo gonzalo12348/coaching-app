@@ -58,11 +58,13 @@ function ButtonGroup() {
           onClick={() => window.location.assign("https://www.instagram.com/gonza.arancibiaa/")}
           src={imgIG}
           style={{ cursor: "pointer", width: "50px", marginRight: 10 }}
+          alt='IG_social_media'
         />
         <img
           onClick={() => window.location.assign("https://www.youtube.com/@gonzaarancibia")}
           src={imgYT}
           style={{ width: "50px", cursor: "pointer" }}
+          alt='YT_social_media'
         />
       </div>
     </div>
