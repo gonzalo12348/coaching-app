@@ -4,6 +4,9 @@
     width: 50vw;
     align-self: center;
   }
+  .day-body {
+    text-align: left;
+  }
   
   .day-title {
     font-size: 2em;

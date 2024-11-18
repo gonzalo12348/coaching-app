@@ -129,9 +129,9 @@ const PlaylistCarousel = () => {
         </div>
       </div>
       {/* Contenido del Día */}
-      {days[currentDay] && days[currentDay]?.day == 1 ? (
+      {days[currentDay] && days[currentDay]?.day === 1 ? (
         <PlaylistItemDay1
-        title={days[currentDay].title}
+        title={"Crea la Persona Que Admiras y Respetas"}
         subtitle={`Mes ${Math.ceil(days[currentDay].day / 30)}`}
         dayNumber={days[currentDay].day}
         content={days[currentDay].body}
